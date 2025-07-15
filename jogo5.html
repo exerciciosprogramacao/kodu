@@ -19,6 +19,7 @@
   
     <div class="bloco">
       <h2>🌑 Pedra</h2>
+      <p class="explicacao">👉 A pedra é um personagem criável.</p>
       <pre>
 1 - Quando: [on land] [type] "bloco do jogador preto" Faz: [vanish] [me]
 
@@ -30,35 +31,71 @@
 
 5 - Quando: [on land] [type] "bloco cinza" Faz: [vanish] [me]
       </pre>
-      <p class="explicacao">👉</p>
-  
+      <p class="explicacao">👉 Essa programação serve apenas para esconder a pedra quando ela encosta em diferentes tipos de chão.</p>
     </div>
   
     <div class="bloco">
-      <h2>🧱</h2>
+      <h2>🌋 Lançador de pedra</h2>
       <pre>
-  
+1 - Quando: [timer] [1 second] [random] [3 seconds] Faz: [launch] [Rock 1] "a pedra criável"
       </pre>
-      <p class="explicacao">👉</p>
+      <p class="explicacao">👉 Lançamos pedras de acordo com um tempo aleatório.</p>
+    </div>
+
+    <div class="bloco">
+      <h2>⛏ Personagem</h2>
+      <p class="explicacao">👉 Este personagem deve ser imóvel.</p>
+      <pre>
+1 - Quando: [keyboard] [Z] Faz: [damage] [1 point]
+
+2 - Quando: [keyboard] [Z] Faz: [color] [white]
+
+3 - Quando: [keyboard] [Z] [not] Faz: [color] [black]
+
+4 - Quando: [keyboard] [Z] Faz: []
+
+    5 - Quando: [bump] [rock] Faz: [heal] [2 points] [me]
+
+    6 - Quando: [bump] [rock] Faz: [boom] [it]
+
+    7 - Quando: [bump] [rock] Faz: [+ score] [black] [1 point]
+
+8 - Quando: [keyboard] [Z] [not] Faz: []
+
+    9 - Quando: [bump] [rock] Faz: [damage] [5 points] [me]
+
+    10 - Quando: [bump] [rock] Faz: [vanish] [it]
+ 
+    11 - Quando: [bump] [rock] Faz: [stun] [me]
+
+12 - Quando: [scored] [black] [equals =] [20 points] Faz: [win]
+      </pre>
+      <p class="explicacao">👉 Quando apertamos a tecla Z, perdemos 1 de vida e ficamos brancos.</p>
+      <p class="explicacao">👉 Quando não apertamos a tecla Z, ficamos da nossa cor, preto nesse personagem.</p>
+      <p class="explicacao">👉 Quando apertamos a tecla Z e acertamos a pedra, curamos 2 pontos e a pedra explode.</p>
+      <p class="explicacao">👉 Quando apertamos a tecla Z e acertamos a pedra, ganhamos 1 ponto no score black.</p>
+      <p class="explicacao">👉 Quando não apertamos a tecla Z e acertamos a pedra, perdemos 5 pontos, ficamos tontos e a pedra desaparece.</p>
+      <p class="explicacao">👉 Com 20 pontos, ganhamos o jogo.</p>
     </div>
   
     <div class="bloco">
-      <h2>🏓</h2>
+      <h2>📃 Disco comentarista</h2>
+      <p class="explicacao">👉 Este personagem deve ser imóvel.</p>
       <pre>
-  
+2 - Quando: [] Faz: [say] "Z"
       </pre>
-      <p class="explicacao">👉</p>
-      
+      <p class="explicacao">👉 Este personagem fala a tecla que o jogador deve apertar.</p>
+  
     </div>
-  
+
     <div class="bloco">
-      <h2>⚽</h2>
-      <p class="explicacao">👉</p>
-      <pre>
-  
-      </pre>
-      <p class="explicacao">👉</p>
-  
+      <h2>⚙ Outros jogadores</h2>
+      <p class="explicacao">👉 Programamos um único jogador, agora você deve copiar o lançador, jogador e o disco.</p>
+      <p class="explicacao">👉 As únicas alterações são nas teclas, cores dos personagens e pontuações. Jogador 2 aperta V, jogador 3 aperta M, jogador 4 aperta P.</p>
+      <p class="explicacao">👉 Jogador 2 é amarelo quando não apertamos a tecla V, e sua pontuação é amarela.</p>
+      <p class="explicacao">👉 Jogador 3 é vermelho quando não apertamos a tecla M, e sua pontuação é vermelha.</p>
+      <p class="explicacao">👉 Jogador 4 é verde quando não apertamos a tecla P, e sua pontuação é verde.</p>
+      <p class="explicacao">👉 Altere o que os discos falam. Cada disco fala uma tecla: V, M, P.</p>
     </div>
 
   <div class="bt">
