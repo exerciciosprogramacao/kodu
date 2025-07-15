@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+  <div class="btt">
+    <button class="avancar" onclick="toggleDarkMode()">👓</button>
+  </div>
+  <h1 class="tit">📘 Documentação do Projeto - Bomberman</h1>
+
+  <div class="image">
+    <img src="./img/mapa.PNG" alt="">
+  </div>
+
+  <div class="bloco">
+    <h2>🎮 Personagem</h2>
+    <pre>
+1 - Quando: [keyboard] [arrows] Faz: [move] [quickly] [quickly] [quickly]
+
+2 - Quando: [keyboard] [space] Faz: [create] [ball 1] [black]
+
+3 - Quando: [bump] [star 1] Faz: [win]
+    </pre>
+    <p class="explicacao">👉 Nosso personagem apenas se move, cria uma bomba e ganha o jogo.</p>
+
+  </div>
+
+  <div class="bloco">
+    <h2>💣 Bomba</h2>
+    <pre>
+1 - Quando: [timer] [4seconds] Faz: [boom] [me]
+    </pre>
+    <p class="explicacao">👉 A bomba deve ser um personagem criável.</p>
+    <p class="explicacao">👉 Depois de criada, a bomba espera 4 segundos para explodir.</p>
+  </div>
+
+  <div class="bloco">
+    <h2>🧱Pedra</h2>
+    <pre>
+1 - Quando: [see] [ball 1] [black] [close by] Faz: []
+
+    2 - Quando: [timer] [4 seconds] Faz: [boom] [me]
+    </pre>
+    <p class="explicacao">👉 Essa lógica faz a pedra explodir apenas se houver uma bomba perto dela.</p>
+    
+  </div>
+
+  <div class="bloco">
+    <h2>🧱 Pedra vermelha</h2>
+    <pre>
+1 - Quando: [see] [ball 1] [black] [close by] [line of sight] Faz: []
+
+    2 - Quando: [timer] [4 seconds] Faz: [boom] [me]
+
+3 - Quando: [bump] [anybot] Faz: [end]
+    </pre>
+    <p class="explicacao">👉 O objetivo da pedra vermelha é explodir quando vê o player por perto e através da parede.</p>
+
+  </div>
+
+  <div class="bloco">
+    <h2>🤖 Inimigo</h2>
+    <pre>
+1 - Quando: [see] [cannon] [red] [line of sight] Faz: [move] [toward]
+
+2 - Quando: [bump] [cannon] [red] Faz: [end]
+
+3 - Quando: [] Faz: [moove] [wonder]
+    </pre>
+    <p class="explicacao">👉 O inimigo se move normalmente, mas, caso veja o player, passa a seguir o jogador.</p>
+
+
+  </div>
+
+  <div class="bloco">
+    <h2>✨ Estrela</h2>
+    <pre>
+1 - Quando: [always] Faz: [glow] [yellow] [me]
+    </pre>
+    <p class="explicacao">👉 Esta programação faz apenas a estrela brilhar.</p>
+
+  </div>
+
+<div class="bt">
+  <!-- <button class="voltar">
+    Voltar
+    
+</button> -->
+  <button class="avancar">
+    <a href="./jogo2.html">Avançar</a>
+</button>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
+
