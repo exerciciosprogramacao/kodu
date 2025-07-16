@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios</title>
+  <link rel="stylesheet" href="./jogo6.css">
+  <link rel="icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+    <div class="btt">
+        <button class="avancar" onclick="toggleDarkMode()">👓</button>
+      </div>
+    <h1 class="tit">📘 Documentação do Projeto - Carregando Bateria</h1>
+    <div class="image">
+      <img src="./img/mapaEletricidade.PNG" alt="">
+    </div>
+  
+    <div class="bloco">
+      <h2>⚡ Personagem amarelo</h2>
+      <pre>
+1 - Quando: [keyboard] [Z] Faz: [express] [ANGRY] [swears]
+
+2 - Quando: [keyboard] [X] Faz: [express] [ANGRY] [swears]
+
+3 - Quando: [keyboard] [Z] Faz: [glow] [blue] [me]
+
+4 - Quando: [keyboard] [X] Faz: [glow] [blue] [me]
+      </pre>
+      <p class="explicacao">👉 Quando apertamos Z ou X o personagem fica brabo e brilha em azul</p>
+  
+    </div>
+   
+    <div class="bloco">
+      <h2>🏭 Fábrica amarela</h2>
+      <p class="explicacao">👉Precisamos ativar a barra de vida do personagem e deixá-la com 405 pontos.</p>
+      <pre>
+1 - Quando: [Fax] Faz: [damage] [100 points] [100 points] [100 points] [100 points] [4 points] [once]
+
+    2 - Quando: [] Faz: [open] [me] [once]
+
+3 - Quando: [keyboard] [Z] Faz: [heal] [1 point]
+
+4 - Quando: [keyboard] [X] Faz: [heal] [1 point]
+
+5 - Quando: [timer] [1 second] Faz: []
+
+    6 - Quando: [health] [equals =] [100 points] [100 points] [100 points] [100 points] [5 points] Faz: [win]
+
+        7 - Quando: [] Faz: [set score] [yellow] [1 point]
+
+8 - Quando: [timer] [2 seconds] [random] [4 seconds] Faz: [damage] [1 point] [me]
+
+9 - Quando: [health] [<=] [1 point] Faz: [heal] [1 point] [me]
+
+10 - Quando: [health] [>=] [100 points] [100 points] [100 points] [100 points] Faz: [close] [me] [once]
+
+11 - Quando: [health] [<=] [100 points] [100 points] [100 points] [100 points] Faz: [open] [me] [once]
+      </pre>
+      <p class="explicacao">👉 No início do jogo, tiramos 404 pontos de vida da fábrica, deixando-a com apenas 1 de vida.</p>
+      <p class="explicacao">👉 Abrimos a porta da fábrica e apertamos Z ou X para curar sua vida.</p>
+      <p class="explicacao">👉 O tempo de 1 segundo na linha 5 serve para dar tempo de a vida da fábrica ficar em 1.</p>
+      <p class="explicacao">👉 Se a vida da fábrica for igual a 405, ganhamos o jogo e aparece 1 na nossa pontuação.</p>
+      <p class="explicacao">👉 A cada 2 a 4 segundos, aleatoriamente, a fábrica perde vida.</p>
+      <p class="explicacao">👉 A fábrica se cura quando tem 1 ou menos ponto, ficando sempre com 1.</p>
+      <p class="explicacao">👉 Com 400 ou mais de vida, a fábrica fecha a porta.</p>
+      <p class="explicacao">👉 Com menos de 400 de vida, ela abre a porta.</p>
+    </div>
+  
+    <div class="bloco">
+      <h2>⚙ Ventilador 1</h2>
+      <pre>
+1 - Quando: [] Faz: [say] "Z" 
+      </pre>
+      <p class="explicacao">👉 Este personagem fala a tecla que o jogador deve apertar.</p>
+  
+    </div>
+
+    <div class="bloco">
+      <h2>⚙ Ventilador 2</h2>
+      <pre>
+Quando: [] Faz: [say] "X" 
+      </pre>
+      <p class="explicacao">👉 Este personagem fala a tecla que o jogador deve apertar.</p>
+  
+    </div>
+
+    <div class="bloco">
+      <h2>📃 Outro jogador</h2>
+ 
+      <p class="explicacao">👉 Copiaremos os personagens que já temos para usar como segundo jogador. </p>
+      <p class="explicacao">👉 Só precisamos mudar as cores e as teclas que serão apertadas para jogar. Sugiro as teclas N e M.</p>
+      <p class="explicacao">👉 Também mudaremos o que os ventiladores do outro personagem falam.</p>
+  
+    </div>    
+
+  <div class="bt">
+    <button class="voltar">
+      <a href="./jogo5.html">Voltar</a>
+  </button>
+    <button class="avancar">
+      <a href="./jogo7.html">Avançar</a>
+  </button>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
