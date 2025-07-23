@@ -11,18 +11,96 @@
     <div class="btt">
         <button class="avancar" onclick="toggleDarkMode()">👓</button>
       </div>
-    <h1 class="tit">📘 Documentação do Projeto - </h1>
+    <h1 class="tit">📘 Documentação do Projeto - Tower Defense </h1>
     <div class="image">
       <img src="./img/pong.PNG" alt="">
     </div>
   
     <div class="bloco">
-      <h2>🏓</h2>
+      <h2>🏍️ Cycle 1 (criável)</h2>
       <pre>
-  
+1 - Quando: [ ] Faz: [move] [on path]
+
+2 - Quando: [health] [=] [00 points] Faz: [+ score] [yellow] [01 points]
+
+3 - Quando: [bump] Faz: [castle] [boom] [me]  
       </pre>
-      <p class="explicacao">👉</p>
-  
+<h3>Difinições</h3>
+<ul>
+  <li>Cor Branca</li>
+  <li>Mostrar Pontos Marcados: <span style="color: green;">ativado</span></li>
+  <li>Máximo de Pontos Marcados: <strong>[50]</strong></li>
+  <li>Criável: <span style="color: green;">ativado</span></li>
+</ul>
+    </div>
+
+    
+    <div class="bloco">
+      <h2>🏍️ Cycle 2 (criável)</h2>
+      <pre>
+1 - Quando: [ ] Faz: [move] [on path]
+
+2 - Quando: [health] [=] [00 points] Faz: [+ score] [yellow] [01 points]
+
+3 - Quando: [bump] Faz: [castle] [boom] [me]  
+      </pre>
+<h3>Difinições</h3>
+<ul>
+  <li style="color: red; font-weight: bold;">Cor Vermelha</li>
+  <li>Mostrar Pontos Marcados: <span style="color: green;">ativado</span></li>
+  <li>Máximo de Pontos Marcados: <strong>[100]</strong></li>
+  <li>Criável: <span style="color: green;">ativado</span></li>
+</ul>
+    </div>
+
+
+
+    <div class="bloco">
+      <h2>🏍️ Cycle 3 (criável)</h2>
+      <pre>
+1 - Quando: [ ] Faz: [move] [on path]
+
+2 - Quando: [health] [=] [00 points] Faz: [+ score] [yellow] [01 points]
+
+3 - Quando: [bump] Faz: [castle] [boom] [me]  
+      </pre>
+<h3>Difinições</h3>
+<ul>
+  <li style="color: green; font-weight: bold;">Cor Verde</li>
+  <li>Mostrar Pontos Marcados: <span style="color: green;">ativado</span></li>
+  <li>Máximo de Pontos Marcados: <strong>[50]</strong></li>
+  <li>Criável: <span style="color: green;">ativado</span></li>
+  <li>Multiplicador de Velocidade de Avanço: <strong>[2.0]</strong></li>
+  <li>Multiplicador de Aceleração em Frente: <strong>[2.0]</strong></li>
+</ul>
+    </div>
+
+
+      <div class="bloco">
+      <h2>Fabrica geradora de Inimigos</h2>
+      <pre>
+1 - Quando: [timer] [3 seconds] Faz: [open]
+
+    2 - Quando: [ ] Faz: [create] [Cycle 1]
+
+        3 - Quando: [ ] Faz: [close]
+
+4 - Quando: [timer] [10 seconds] Faz: [open]
+
+    5 - Quando: [ ] Faz: [create] [Cycle 2]
+
+        6 - Quando: [ ] Faz: [close]
+
+7 - Quando: [timer] [10 seconds] [1 second] Faz: [open]
+
+    8 - Quando: [ ] Faz: [create] [Cycle 3]
+
+        9 - Quando: [ ] Faz: [close]
+
+10 - Quando: [timer] [60 seconds] Faz: [switch] [page 2]
+      </pre>
+<h3>Difinições</h3>
+
     </div>
   
     <div class="bloco">
