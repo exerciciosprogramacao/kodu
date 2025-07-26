@@ -44,7 +44,7 @@
 
 3 - Quando: [bump] Faz: [castle] [boom] [me]  
       </pre>
-<h3>Difinições</h3>
+<h3>Definições</h3>
 <ul>
   <li style="color: red; font-weight: bold;">Cor Vermelha</li>
   <li>Mostrar Pontos Marcados: <span style="color: green;">ativado</span></li>
@@ -64,7 +64,7 @@
 
 3 - Quando: [bump] Faz: [castle] [boom] [me]  
       </pre>
-<h3>Difinições</h3>
+<h3>Definições</h3>
 <ul>
   <li style="color: green; font-weight: bold;">Cor Verde</li>
   <li>Mostrar Pontos Marcados: <span style="color: green;">ativado</span></li>
@@ -74,7 +74,6 @@
   <li>Multiplicador de Aceleração em Frente: <strong>[2.0]</strong></li>
 </ul>
     </div>
-
 
       <div class="bloco">
       <h2>Fabrica geradora de Inimigos</h2>
@@ -99,14 +98,55 @@
 
 10 - Quando: [timer] [60 seconds] Faz: [switch] [page 2]
       </pre>
-<h3>Difinições</h3>
-
+<h3>Página 2</h3>
+<p>Você deve copiar e colar todas as programações da página 1 para a página 2.</p>
+<p>O que muda?</p>
+  <ul>
+    <li>Os tempos para gerar cada inimigo deve diminuir um pouco, você decide quanto.</li>
+    <li>Faça a Fábrica trocar de cor, para termos um indicador visual que a página mudou.</li>
+    <pre>
+    Quando: [ ] Faz: [color] [red]
+    </pre>
+    <li>Depois de 60 segundos a página deve ir para a página 3.</li>
+  </ul>
+  <hr>
+<h3>Página 3</h3>
+<p>Você deve copiar e colar todas as programações da página 2 para a página 3.</p>
+<p>O que muda?</p>
+  <ul>
+    <li>Os tempos para gerar cada inimigo deve diminuir um pouco, você decide quanto.</li>
+    <li>Faça a Fábrica sempre ficar trocando de cor, fazendo ela brilhar a todo momento.</li>
+    <pre>
+    Quando: [timer][.25 seconds] Faz: [color] [random]
+    </pre>
+    <li>Depois de 60 segundos você deve ganhar o jogo.</li>
+  </ul>
+  <hr>
+<h3>Definições</h3>
+<ul>
+  <li>Imóvel</li>
+  <li>Invuneravel</li>
+</ul>
     </div>
   
     <div class="bloco">
-      <h2>🧱</h2>
+      <h2>Kodu (torres)</h2>
       <pre>
-  
+1 - Quando:[] Faz: [say] (zzzzzzzzzzzzzzzzz)
+
+2 - Quando: [mouse] [left] [me] Faz: [switch] [page 2]
+      </pre>
+      <h3>Página 2</h3>
+      <pre>
+1 - Quando: [see] [cycle] [close by] Faz: [shoot] [blip]
+
+2 - Quando: [] Faz: [express] [ANGRY] [swears] [me]
+
+3 - Quando: [mouse] [left] [me] Faz: []
+
+    4 - Quando: [scored] [yellow] [>=] [10 points] Faz: [- subtract] [yellow] [10 points]
+
+        5 - Quando: [] Faz: [switch] [page 3]
       </pre>
       <p class="explicacao">👉</p>
     </div>
