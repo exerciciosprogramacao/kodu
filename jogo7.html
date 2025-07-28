@@ -13,7 +13,10 @@
       </div>
     <h1 class="tit">📘 Documentação do Projeto - Tower Defense </h1>
     <div class="image">
-      <img src="./img/pong.PNG" alt="">
+      <img src="./img/Mapa jogo 7 tower defense kodu.png" alt="">
+      <br>
+      <a href="./mapa/Tower Defense somente o mapa.Kodu2" style="text-decoration: underline;">Clique aqui para baixar o mapa</a>
+
     </div>
   
     <div class="bloco">
@@ -54,7 +57,6 @@
     </div>
 
 
-
     <div class="bloco">
       <h2>🏍️ Cycle 3 (criável)</h2>
       <pre>
@@ -73,10 +75,16 @@
   <li>Multiplicador de Velocidade de Avanço: <strong>[2.0]</strong></li>
   <li>Multiplicador de Aceleração em Frente: <strong>[2.0]</strong></li>
 </ul>
+
+<h3 style="color: #2c3e50;">🔧 Funcionamento dos Cycles</h3>
+<p class="explicacao">👉 Todos os Cycles seguem exatamente as mesmas 3 regras de comportamento.</p>
+<p class="explicacao">👉 <strong>Movimento contínuo:</strong> Seguem um caminho pré-definido automaticamente (<code>[always] → [move on path]</code>).</p>
+<p class="explicacao">👉 <strong>Quando destruídos:</strong> Adicionam 1 ponto amarelo ao jogador (<code>[health=0] → [+1 yellow points]</code>).</p>
+<p class="explicacao">👉 <strong>Ao colidir:</strong> Se atingirem o castelo, se autodestroem (<code>[bump castle] → [boom me]</code>).</p>
     </div>
 
       <div class="bloco">
-      <h2>Fabrica geradora de Inimigos</h2>
+      <h2>🏭 Fabrica geradora de Inimigos</h2>
       <pre>
 1 - Quando: [timer] [3 seconds] Faz: [open]
 
@@ -98,7 +106,7 @@
 
 10 - Quando: [timer] [60 seconds] Faz: [switch] [page 2]
       </pre>
-<h3>Página 2</h3>
+<h3>📑Página 2</h3>
 <p>Você deve copiar e colar todas as programações da página 1 para a página 2.</p>
 <p>O que muda?</p>
   <ul>
@@ -110,7 +118,7 @@
     <li>Depois de 60 segundos a página deve ir para a página 3.</li>
   </ul>
   <hr>
-<h3>Página 3</h3>
+<h3>📑Página 3</h3>
 <p>Você deve copiar e colar todas as programações da página 2 para a página 3.</p>
 <p>O que muda?</p>
   <ul>
@@ -124,19 +132,25 @@
   <hr>
 <h3>Definições</h3>
 <ul>
-  <li>Imóvel</li>
-  <li>Invuneravel</li>
+  <li>Imóvel: <span style="color: green; font-weight: bold;">ativado</span></li>
+  <li>Invulnerável: <span style="color: green; font-weight: bold;">ativado</span></li>
 </ul>
+
+<p class="explicacao">👉 <strong>Página 1:</strong> Inicia com ciclos a cada 3s e 10s, mudando para página 2 após 60s.</p>
+<p class="explicacao">👉 <strong>Página 2:</strong> Acelera produção (2s/5s) e muda cor para verde, vai para página 3 em 60s.</p>
+<p class="explicacao">👉 <strong>Página 3:</strong> Ciclos mais rápidos (2s/5s) com cores aleatórias, vitória após 60s.</p>
+<p class="explicacao">👉 <strong>Padrão:</strong> Cada ciclo faz <code>[open] → [create Cycle X] → [close]</code>.</p>
+<p class="explicacao">👉 <strong>Dificuldade:</strong> Tempos diminuem a cada página (3s→2s, 10s→5s).</p>
     </div>
   
     <div class="bloco">
-      <h2>Kodu (torres)</h2>
+      <h2>🥚Kodu (torres)</h2>
       <pre>
 1 - Quando:[] Faz: [say] (zzzzzzzzzzzzzzzzz)
 
 2 - Quando: [mouse] [left] [me] Faz: [switch] [page 2]
       </pre>
-      <h3>Página 2</h3>
+      <h3>📑Página 2</h3>
       <pre>
 1 - Quando: [see] [cycle] [close by] Faz: [shoot] [blip]
 
@@ -147,27 +161,47 @@
     4 - Quando: [scored] [yellow] [>=] [10 points] Faz: [- subtract] [yellow] [10 points]
 
         5 - Quando: [] Faz: [switch] [page 3]
+
+6 - Quando: [see] [cycle] Faz: [turn toward]
       </pre>
-      <p class="explicacao">👉</p>
+
+            <h3>📑Página 3</h3>
+      <pre>
+1 - Quando: [see] [cycle] [close by] Faz: [shoot] [missile]  
+
+2 - Quando: [see] [cycle] Faz: [turn toward]  
+
+3 - Quando: [always] Faz: [color] [red]
+      </pre>
+<h3>Definições</h3>
+<ul>
+  <li>Imóvel: <span style="color: green; font-weight: bold;">ativado</span></li>
+  <li>Invulnerável: <span style="color: green; font-weight: bold;">ativado</span></li>
+  <li>Dano do blip: <strong>[5]</strong></li>
+  <li>Tempo de recarga do blip: <strong>[1 segundo]</strong></li>
+  <li>Dano do míssil: <strong>[50]</strong></li>
+  <li>Tempo de recarga do míssil: <strong>[3 segundos]</strong></li>
+</ul>
+<p class="explicacao">👉 <strong>Estado Inicial (Página 1):</strong> O personagem aparece dormindo (mostrando "zzzzzzzzzzz") e acorda ao ser clicado, indo para a Página 2.</p>
+<p class="explicacao">👉 <strong>Modo Combate (Página 2):</strong> Quando vê inimigos próximos, atira (<code>blip</code>). Fica visivelmente bravo (ANGRY) quando atacado. Clicar nele consome 10 pontos amarelos. Vira-se automaticamente para enfrentar inimigos e, com pontos suficientes, avança para a Página 3.</p>
+<p class="explicacao">👉 <strong>Modo Avançado (Página 3):</strong> Agora atira <span style="color: #e74c3c;">mísseis</span> contra inimigos próximos, mantém o comportamento de enfrentamento e fica permanentemente vermelho, indicando estado de alerta máximo.</p>
+</div>
     </div>
   
     <div class="bloco">
-      <h2>🏓</h2>
+      <h2>🏰 Castelo</h2>
       <pre>
-  
+1 - Quando: [bump] [cycle] Faz: [damage] [20 points] [20 points] [me] 
+
+2 - Quando: [health] [equals 0 points] Faz: [end] 
       </pre>
-      <p class="explicacao">👉</p>
-      
-    </div>
-  
-    <div class="bloco">
-      <h2>⚽</h2>
-      <p class="explicacao">👉</p>
-      <pre>
-  
-      </pre>
-      <p class="explicacao">👉</p>
-  
+<h3>Definições</h3>
+<ul>
+  <li>Invulnerável: <span style="color: green;">ativado</span></li>
+  <li>Mostrar pontos marcados: <span style="color: green;">ativado</span></li>
+  <li>Máximo de pontos marcados: <strong>[120]</strong></li>
+  <li>Escala de Tamanho: <strong>[1.7]</strong></li>
+</ul>      
     </div>
 
   <div class="bt">

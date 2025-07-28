@@ -83,6 +83,8 @@ body.dark {
     max-width: 800px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     /* background: #eee;
     border-radius: 5px; */
   }
