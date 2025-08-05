@@ -11,45 +11,121 @@
     <div class="btt">
         <button class="avancar" onclick="toggleDarkMode()">👓</button>
       </div>
-    <h1 class="tit">📘 Documentação do Projeto - </h1>
+    <h1 class="tit">📘 Documentação do Projeto - PvP </h1>
     <div class="image">
-      <img src="./img/pong.PNG" alt="">
+      <img src="./img/Mapa jogo 9.png" alt="">
     </div>
   
     <div class="bloco">
-      <h2>🏓</h2>
+      <h2>🎯Canhão</h2>
       <pre>
-  
+1 - Quando: [see] [kodu] Faz: [move toward]
+
+2 - Quando: [timer] [3 seconds] Faz: [shoot] [missile level]
+
+3 - Quando: [bump] [missile] Faz: [boom me]
       </pre>
-      <p class="explicacao">👉</p>
+      <p class="explicacao">👉 Se move em direção ao Kodu e atira um míssel a cada 3 segundos</p>
   
     </div>
   
     <div class="bloco">
-      <h2>🧱</h2>
+      <h2>Kodu Verde</h2>
       <pre>
-  
+1 - Quando: [keyboard] [Arrows] Faz: [move quickly quickly]
+
+2 - Quando: [bump] [cannon] Faz: [boom it]
+
+  3 - Quando: [always] Faz: [score] [green 1 point]
+
+4 - Quando: [health] [equals 0 points] Faz: [win red]
+
+5 - Quando: [scored green] [equals 10 points] Faz: [win green]
+
+6 - Quando: [bump] [heart] Faz: [eat]
+
+  7 - Quando: [always] Faz: [heal] [20 points me]
+
+8 - Quando: [bump] [star] Faz: [eat]
+
+  9 - Quando: [always] Faz: [set score] [white 1 point once]
+
+10 - Quando: [scored white] [equals 1 point] Faz: []
+
+  11 - Quando: [bump] [kodu red] Faz: [boom it]
+
+  12 - Quando: [timer] [0.25 second] Faz: [color random me]
+
+13 - Quando: [timer] [10 seconds] Faz: [set score] [white 0 points once]
+
+  14 - Quando: [always] Faz: [color green me]
       </pre>
-      <p class="explicacao">👉</p>
+  
+  <p class="explicacao">👉<strong>Controles:</strong> Move com setas | <strong>Combate:</strong> Encoste em canhões/inimigo para destruir</p>
+  <p class="explicacao">👉<strong>Itens:</strong> ❤️ Cura vida | ⭐ Bônus secreto</p>
+  <p class="explicacao">👉<strong>Pontos:</strong> +1 verde contínuo | <strong>Vitória:</strong> 10 pontos OU matar inimigo</p>
+  <p class="explicacao">👉<strong>Perde:</strong> se vida = 0</p>
     </div>
   
     <div class="bloco">
-      <h2>🏓</h2>
+      <h2>Kodu Vermelho</h2>
       <pre>
-  
+1 - Quando: [keyboard] [WASD] Faz: [move quickly quickly]
+
+2 - Quando: [bump] [cannon] Faz: [boom it]
+
+  3 - Quando: [always] Faz: [score] [red 1 point]
+
+4 - Quando: [health] [equals 0 points] Faz: [win green]
+
+5 - Quando: [scored red] [equals 10 points] Faz: [win red]
+
+6 - Quando: [bump] [heart] Faz: [eat]
+
+  7 - Quando: [always] Faz: [heal] [20 points me]
+
+8 - Quando: [bump] [star] Faz: [eat]
+
+  9 - Quando: [always] Faz: [set score] [black 1 point once]
+
+10 - Quando: [scored black] [equals 1 point] Faz: []
+
+  11 - Quando: [bump] [kodu green] Faz: [boom it]
+
+  12 - Quando: [timer] [0.25 second] Faz: [color random me]
+
+13 - Quando: [timer] [10 seconds] Faz: [set score] [white 0 points once]
+
+  14 - Quando: [always] Faz: [color red me]
       </pre>
-      <p class="explicacao">👉</p>
+      <p class="explicacao">👉É a mesma programação do outro Kodu</p>
       
     </div>
   
     <div class="bloco">
-      <h2>⚽</h2>
-      <p class="explicacao">👉</p>
+      <h2>Gerador de Inimigos (torre fantasma)</h2>
       <pre>
-  
+1 - Quando: [see] [kodu] Faz: [turn toward]
+
+2 - Quando: [timer] [4 seconds] Faz: []
+
+  3 - Quando: [see kodu] [far away] Faz: [create once] [Cannon 1]
       </pre>
-      <p class="explicacao">👉</p>
-  
+      <p class="explicacao">👉Sempre olha pro Kodu</p>
+      <p class="explicacao">👉Cria o canhão a cada 4 segundos quando o kodu não está perto</p>
+    </div>
+
+        <div class="bloco">
+      <h2>Blimp (personagem que voa pelo mapa)</h2>
+      <pre>
+1 - Quando: [timer] [10 seconds] Faz: [create] [heart]
+
+2 - Quando: [timer] [30 seconds] Faz: [create] [star]
+
+3 - Quando: [always] Faz: [move] [on path]
+      </pre>
+      <p class="explicacao">👉 Sempre se move pelo caminho</p>
+      <p class="explicacao">👉Cria corações e estrelas para os jogadores pegarem</p>
     </div>
 
   <div class="bt">
