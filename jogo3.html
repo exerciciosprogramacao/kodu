@@ -23,7 +23,7 @@
 
 2 - Quando: [scored] [red] [>=] [50 points] Faz: [win]
 
-3 - Quando: [health] [<=] [points] Faz: [end]
+3 - Quando: [health] [<=] [0 points] Faz: [end]
     </pre>
     <p class="explicacao">👉Para este exemplo o personagem tem um tamanho de 0,4.</p>
     <p class="explicacao">👉Devemos habilitar a opção mostrar pontos marcados, para vermos a barra de vida.</p>
@@ -36,7 +36,7 @@
     <pre>
 1 - Quando: [always] Faz: [move] [west]
 
-2 - Quando: [on land] [type] "blobo final" Faz: [vanish] [me]
+2 - Quando: [on land] [type] "bloco final" Faz: [vanish] [me]
 
 3 - Quando: [bump] [Cycle] Faz: [damage] [10 points] [it]
 
@@ -118,4 +118,5 @@
   </div>
   <script src="./script.js"></script>
 </body>
+
 </html>
