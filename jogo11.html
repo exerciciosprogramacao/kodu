@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios</title>
+  <link rel="stylesheet" href="./jogo11.css">
+  <link rel="icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+    <div class="btt">
+        <button class="avancar" onclick="toggleDarkMode()">👓</button>
+      </div>
+    <h1 class="tit">📘 Documentação do Projeto - Kodugotchi </h1>
+    <div class="image">
+      <img src="./img/mapa jogo 11 - kodugotchi.png" alt="">
+      <br>
+      <a href="./mapa/" style="text-decoration: underline;">Clique aqui para baixar o mapa e testar como o jogo deve ficar.</a>
+
+    </div>
+  
+    <div class="bloco">
+      <h2>Código</h2>
+
+<h3>Factory 1</h3>
+<pre>
+PÁGINA 1
+
+1 - Quando: [mouse left black] Faz: [set score] [score D] [1 point]
+
+2 - Quando: [mouse left green] Faz: [launch] [apple] [low low]
+
+3 - Quando: [mouse left blue] Faz: [set score] [score B] [1 point]
+
+4 - Quando: [mouse left yellow] Faz: [set score] [score T] [1 point]
+
+5 - Quando: [scored black below 0 points] Faz: [set score] [black 0 points]
+
+6 - Quando: [scored green below 0 points] Faz: [set score] [green 0 points]
+
+7 - Quando: [scored blue below 0 points] Faz: [set score] [blue 0 points]
+
+8 - Quando: [scored yellow below 0 points] Faz: [set score] [yellow 0 points]
+
+9 - Quando: [scored brown below 0 points] Faz: [set score] [brown 0 points]
+
+10 - Quando: [scored score D equals 1 point] Faz:
+
+    11 - Quando: [see kodu] Faz: [open once]
+
+    12 - Quando: [bump kodu] Faz: [close]
+
+13 - Quando: [scored score T equals 1 point] Faz:
+
+    14 - Quando: [timer seconds 2] Faz: [launch Ball 1]
+
+    15 - Quando: [timer seconds 10] Faz: [set score score T 0 points]
+</pre>
+
+<p class="explicacao">👉 <strong>Factory:</strong> Funciona como o painel de controle do jogo.</p>
+<p class="explicacao">👉 Cada clique em uma cor executa uma função diferente — por exemplo, iniciar ações do Koduzin, lançar bolas ou registrar pontos.</p>
+<p class="explicacao">👉 O botão <strong>preto</strong> ativa a ação de “doença”, o <strong>verde</strong> alimenta o Koduzin, o <strong>azul</strong> ativa o modo “brincar” e o <strong>amarelo</strong> gera bolas que representam “banho”.</p>
+<p class="explicacao">👉 Ela também controla os limites das pontuações, impedindo que fiquem negativas.</p>
+<p class="explicacao">👉 Quando certas pontuações chegam a 1 ponto, executa eventos extras, como abrir, fechar ou lançar objetos.</p>
+
+
+<h3>Kodu 1</h3>
+<pre>
+PÁGINA 1
+
+1 - Quando: [see ball] Faz: [turn toward quickly quickly quickly]
+
+    2 - Quando: [always] Faz: [express stars]
+
+3 - Quando: [timer seconds 10] Faz: [score green 10 points]
+
+4 - Quando: [timer seconds 30] Faz: [score black 20 points 2 points]
+
+5 - Quando: [timer seconds 30 seconds 10] Faz: [score blue 20 points]
+
+6 - Quando: [timer seconds 10 seconds 10 seconds 5] Faz: [score yellow 20 points]
+
+7 - Quando: [scored green >= 10 points] Faz:
+
+    8 - Quando: [timer seconds 10] Faz: [score yellow 5 points]
+
+9 - Quando: [scored score B equals 1 point] Faz: [move on path blue]
+
+    10 - Quando: [see lily pad] Faz: [move toward]
+
+11 - Quando: [on water] Faz: [express flowers happy]
+
+    12 - Quando: [timer second 0,25] Faz: [subtract blue 1 point]
+
+    13 - Quando: [timer seconds 5 seconds 4] Faz: [set score score B 0 points]
+
+14 - Quando: [on land type 15] Faz: [turn south]
+
+15 - Quando: [scored score D equals 1 point] Faz:
+
+    16 - Quando: [see factory] Faz: [move toward]
+
+    17 - Quando: [bump factory] Faz: [camouflage me]
+
+        18 - Quando: [always] Faz: [lighting]
+
+    19 - Quando: [timer seconds 5 seconds 3] Faz: [set score score D 0 points]
+
+        20 - Quando: [always] Faz: [uncamouflage me once]
+
+        21 - Quando: [always] Faz: [lighting]
+
+        22 - Quando: [always] Faz: [subtract black 20 points 20 points]
+
+23 - Quando: [bump apple] Faz: [eat]
+
+    24 - Quando: [always] Faz: [subtract green 5 points]
+
+        25 - Quando: [always] Faz: [express happy hearts once]
+
+26 - Quando: [scored blue above 20 points 10 points 5 points] Faz:
+
+    27 - Quando: [timer second 1] Faz: [score brown 1 point]
+
+    28 - Quando: [mouse left brown] Faz: [subtract brown 1 point]
+
+29 - Quando: [scored brown equals 100 points] Faz: [knockout me once]
+
+    30 - Quando: [always] Faz: [say]
+        say verb text
+        MORRI (X_X)
+
+        31 - Quando: [timer seconds 5] Faz: [end]
+
+32 - Quando: [scored green above 50 points] Faz:
+
+    33 - Quando: [timer seconds 2] Faz: [score brown 1 point]
+
+    34 - Quando: [mouse left brown] Faz: [subtract brown 1 point]
+
+35 - Quando: [always] Faz: [move on path grey]
+
+36 - Quando: [scored black above 50 points 10 points] Faz:
+
+    37 - Quando: [timer second 1] Faz: [score brown 1 point]
+
+    38 - Quando: [mouse left brown] Faz: [subtract brown 1 point]
+
+39 - Quando: [scored brown above 0 points] Faz: [express sad swears]
+
+    40 - Quando: [always] Faz: [say]
+        say verb text
+        Acho que estou doente
+</pre>
+
+<p class="explicacao">👉 <strong>Kodu (Koduzin):</strong> É o personagem principal que o jogador deve cuidar.</p>
+<p class="explicacao">👉 Ele possui várias necessidades — fome, diversão, saúde e limpeza — controladas por pontuações coloridas.</p>
+<p class="explicacao">👉 Quando vê uma bola, ele se vira rapidamente e expressa alegria com estrelas.</p>
+<p class="explicacao">👉 Se o tempo passar, ele ganha pontos que simulam diferentes estados (verde = fome, preto = sono/doença, azul = tédio, amarelo = sujeira).</p>
+<p class="explicacao">👉 Dependendo da pontuação, ele executa ações como comer, camuflar, mover-se em caminhos ou expressar emoções.</p>
+<p class="explicacao">👉 Se ficar com muitos pontos marrons, significa que está em estado crítico e pode morrer.</p>
+<p class="explicacao">👉 Quando morre, aparece a mensagem <strong>“MORRI (X_X)”</strong> e o jogo termina.</p>
+<p class="explicacao">👉 Caso ele fique doente (pontos marrons acima de 0), mostra a fala <strong>“Acho que estou doente”</strong>.</p>
+
+
+<h3>Ball 1</h3>
+<pre>
+PÁGINA 1
+
+1 - Quando: [mouse left me] Faz: [subtract yellow 5 points]
+
+    2 - Quando: [always] Faz: [vanish me]
+
+3 - Quando: [timer seconds 10] Faz: [vanish me]
+</pre>
+
+<p class="explicacao">👉 <strong>Ball:</strong> Representa as bolas de limpeza lançadas pela Factory.</p>
+<p class="explicacao">👉 Quando clicadas, reduzem a sujeira (pontos amarelos) do Koduzin.</p>
+<p class="explicacao">👉 Desaparecem automaticamente após um tempo para evitar acúmulo no cenário.</p>
+
+</div>
+  
+  <div class="bt">
+    <button class="voltar">
+      <a href="./jogo10.html">Voltar</a>
+  </button>
+    <!-- <button class="avancar">
+      <a href="./jogo6.html">Avançar</a>
+  </button> -->
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
