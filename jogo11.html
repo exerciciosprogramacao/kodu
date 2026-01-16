@@ -8,9 +8,10 @@
   <link rel="icon" type="image/png" href="./img/logo.png">
 </head>
 <body>
-    <div class="btt">
-        <button class="avancar" onclick="toggleDarkMode()">👓</button>
-      </div>
+     <div class="btt">
+    <button class="avancar">💰 40</button>
+    <button class="avancar" onclick="toggleDarkMode()">👓</button>
+  </div>
     <h1 class="tit">📘 Documentação do Projeto - Kodugotchi </h1>
     <div class="image">
       <img src="./img/mapa jogo 11 - kodugotchi.png" alt="">
@@ -22,41 +23,41 @@
     </div>
   
     <div class="bloco">
-      <h2>Código</h2>
+      
 
-<h3>Factory 1</h3>
+<h2>Factory</h2>
 <pre>
 PÁGINA 1
 
-1 - Quando: [mouse left button black] Faz: [set score] [score D] [1 point]
+1 - Quando: [mouse] [left] [button black] Faz: [set score] [score D] [1 point]
 
-2 - Quando: [mouse left button green] Faz: [launch] [apple] [low low]
+2 - Quando: [mouse] [left] [button green] Faz: [launch] [apple] [low] [low]
 
-3 - Quando: [mouse left button blue] Faz: [set score] [score B] [1 point]
+3 - Quando: [mouse] [left] [button blue] Faz: [set score] [score B] [1 point]
 
-4 - Quando: [mouse left button yellow] Faz: [set score] [score T] [1 point]
+4 - Quando: [mouse] [left] [button yellow] Faz: [set score] [score T] [1 point]
 
-5 - Quando: [scored black below 0 points] Faz: [set score] [black 0 points]
+5 - Quando: [scored] [black] [below] [0 points] Faz: [set score] [black] [0 points]
 
-6 - Quando: [scored green below 0 points] Faz: [set score] [green 0 points]
+6 - Quando: [scored] [green] [below] [0 points] Faz: [set score] [green] [0 points]
 
-7 - Quando: [scored blue below 0 points] Faz: [set score] [blue 0 points]
+7 - Quando: [scored] [blue] [below] [0 points] Faz: [set score] [blue] [0 points]
 
-8 - Quando: [scored yellow below 0 points] Faz: [set score] [yellow 0 points]
+8 - Quando: [scored] [yellow] [below] [0 points] Faz: [set score] [yellow] [0 points]
 
-9 - Quando: [scored brown below 0 points] Faz: [set score] [brown 0 points]
+9 - Quando: [scored] [brown] [below] [0 points] Faz: [set score] [brown] [0 points]
 
-10 - Quando: [scored score D equals 1 point] Faz: []
+10 - Quando: [scored] [score D] [equals] [1 point] Faz: []
 
-    11 - Quando: [see kodu] Faz: [open once]
+    11 - Quando: [see] [kodu] Faz: [open] [once]
 
-    12 - Quando: [bump kodu] Faz: [close]
+    12 - Quando: [bump] [kodu] Faz: [close]
 
-13 - Quando: [scored score T equals 1 point] Faz: []
+13 - Quando: [scored] [score T] [equals] [1 point] Faz: []
 
-    14 - Quando: [timer seconds 2] Faz: [launch Ball 1]
+    14 - Quando: [timer] [seconds 1] Faz: [launch] [Ball 1] [low] [weak]
 
-    15 - Quando: [timer seconds 10] Faz: [set score score T 0 points]
+    15 - Quando: [timer] [seconds 10] Faz: [set score] [score T] [0 points]
 </pre>
 
 <p class="explicacao">👉 <strong>Factory:</strong> Funciona como o painel de controle do jogo.</p>
@@ -66,93 +67,95 @@ PÁGINA 1
 <p class="explicacao">👉 Quando certas pontuações chegam a 1 ponto, executa eventos extras, como abrir, fechar ou lançar objetos.</p>
 
 
-<h3>Kodu 1</h3>
+<h2>Kodu</h2>
+<p class="explicacao">👉 Nas Definições do Kodu ajuste:</p> </h2>
+<p class="explicacao">👉 O Multiplicador de velocidade de avanço para 1,5.</p>
+<p class="explicacao">👉 O Multiplicador de velocidade de viragem para 1,5.</p>
+<p class="explicacao">👉 O Multiplicador de aceleração em frente para 1,5.</p>
+<p class="explicacao">👉 O Multiplicador de aceleração de viragem para 1,5.</p>
 <pre>
-PÁGINA 1
 
-1 - Quando: [see ball] Faz: [turn toward quickly quickly quickly]
 
-    2 - Quando: [always] Faz: [express stars]
+1 - Quando: [see] [ball] Faz: [turn] [toward] [quickly] [quickly] [quickly]
 
-3 - Quando: [timer seconds 10] Faz: [score green 10 points]
+    2 - Quando: [always] Faz: [express] [stars]
 
-4 - Quando: [timer seconds 30] Faz: [score black 20 points 2 points]
+3 - Quando: [timer] [seconds 10] [seconds 5] Faz: [+ score] [green] [10 points]
 
-5 - Quando: [timer seconds 30 seconds 10] Faz: [score blue 20 points]
+4 - Quando: [timer] [seconds 30] Faz: [+ score] [black] [20 points] [2 points]
 
-6 - Quando: [timer seconds 10 seconds 10 seconds 5] Faz: [score yellow 20 points]
+5 - Quando: [timer] [seconds 30] [seconds 10] Faz: [+ score] [blue] [20 points]
 
-7 - Quando: [scored green >= 10 points] Faz: []
+6 - Quando: [timer] [seconds 10] [seconds 10] [seconds 5] Faz: [+ score] [yellow] [20 points]
 
-    8 - Quando: [timer seconds 10] Faz: [score yellow 5 points]
+7 - Quando: [scored] [green] [>=] [10 points] Faz: []
 
-9 - Quando: [scored score B equals 1 point] Faz: []
+    8 - Quando: [timer] [seconds 10] Faz: [+ score] [yellow] [5 points]
 
-    10 - Quando: [see lily pad] Faz: [move toward]
+9 - Quando: [scored] [score B] [equals] [1 point] Faz: [move] [on path] [blue] [quickly]
 
-11 - Quando: [on water] Faz: [express flowers happy]
+    10 - Quando: [see] [lily pad] Faz: [move] [toward] [quickly]
 
-    12 - Quando: [timer second 0,25] Faz: [subtract blue 1 point]
+11 - Quando: [on water] Faz: [express] [flowers] [happy]
 
-    13 - Quando: [timer seconds 5 seconds 4] Faz: [set score score B 0 points]
+    12 - Quando: [timer] [second] [0,125] Faz: [- subtract] [blue] [1 point]
 
-14 - Quando: [on land type 15] Faz: [turn south]
+    13 - Quando: [timer] [seconds 5] [seconds 4] Faz: [set score] [score B] [0 points]
 
-15 - Quando: [scored score D equals 1 point] Faz: []
+14 - Quando: [on land] [type] "bloco 15" Faz: [turn] [south]
 
-    16 - Quando: [see factory] Faz: [move toward]
+15 - Quando: [scored] [score D] [equals] [1 point] Faz: []
 
-    17 - Quando: [bump factory] Faz: [camouflage me]
+    16 - Quando: [see] [factory] Faz: [move] [toward]
 
-        18 - Quando: [always] Faz: [lighting] [Escuro]
+    17 - Quando: [bump] [factory] Faz: [camouflage] [me]
 
-    19 - Quando: [timer seconds 5 seconds 3] Faz: [set score score D 0 points]
+        18 - Quando: [ ] Faz: [lighting] "Escuro"
 
-        20 - Quando: [always] Faz: [uncamouflage me once]
+    19 - Quando: [timer] [seconds 5] [seconds 3] Faz: [set score] [score D] [0 points]
 
-        21 - Quando: [always] Faz: [lighting] [Dia]
+        20 - Quando: [ ] Faz: [uncamouflage] [me] [once]
 
-        22 - Quando: [always] Faz: [subtract black 20 points 20 points]
+        21 - Quando: [ ] Faz: [lighting] "Dia"
 
-23 - Quando: [bump apple] Faz: [eat]
+        22 - Quando: [ ] Faz: [- subtract] [black] [20 points] [20 points]
 
-    24 - Quando: [always] Faz: [subtract green 5 points]
+23 - Quando: [bump] [apple] Faz: [eat]
 
-        25 - Quando: [always] Faz: [express happy hearts once]
+    24 - Quando: [always] Faz: [- subtract] [green] [5 points]
 
-26 - Quando: [scored blue above 20 points 10 points 5 points] Faz: []
+        25 - Quando: [always] Faz: [express] [happy] [hearts] [once]
 
-    27 - Quando: [timer second 1] Faz: [score brown 1 point]
+26 - Quando: [scored] [blue] [above] [20 points] [10 points] [5 points] Faz: []
 
-    28 - Quando: [mouse left button brown] Faz: [subtract brown 1 point]
+    27 - Quando: [timer] [second 1] Faz: [+ score] [brown] [1 point]
 
-29 - Quando: [scored brown equals 100 points] Faz: [knockout me once]
+    28 - Quando: [mouse] [left] [button brown] Faz: [- subtract] [brown] [1 point]
 
-    30 - Quando: [always] Faz: [say]
-        say verb text
-        MORRI (X_X)
+29 - Quando: [scored] [brown] [equals] [100 points] Faz: [knockout] [me] [once]
 
-        31 - Quando: [timer seconds 5] Faz: [end]
+    30 - Quando: [ ] Faz: [say] "MORRI (X_X)"
 
-32 - Quando: [scored green above 50 points] Faz: []
+        31 - Quando: [timer] [seconds 5] Faz: [end]
 
-    33 - Quando: [timer seconds 2] Faz: [score brown 1 point]
+32 - Quando: [scored] [green] [above] [50 points] Faz: []
 
-    34 - Quando: [mouse left button brown] Faz: [subtract brown 1 point]
+    33 - Quando: [timer] [seconds 2] Faz: [score] [brown] [1 point]
 
-35 - Quando: [always] Faz: [move on path grey]
+    34 - Quando: [mouse] [left] [button brown] Faz: [- subtract] [brown] [1 point]
 
-36 - Quando: [scored black above 50 points 10 points] Faz: []
+35 - Quando: [always] Faz: [move] [on path] [grey]
 
-    37 - Quando: [timer second 1] Faz: [score brown 1 point]
+36 - Quando: [scored] [black] [above] [50 points] [10 points] Faz: []
 
-    38 - Quando: [mouse left brown] Faz: [subtract brown 1 point]
+    37 - Quando: [timer] [second 1] Faz: [score brown] [1 point]
 
-39 - Quando: [scored brown above 0 points] Faz: [express sad swears]
+    38 - Quando: [mouse] [left] [button brown] Faz: [subtract] [brown] [1 point]
 
-    40 - Quando: [always] Faz: [say]
-        say verb text
-        Acho que estou doente
+39 - Quando: [scored][brown] [above] [0 points] Faz: [express] [sad] [swears]
+
+    40 - Quando: [always] Faz: [say] "Acho que estou doente"
+        
 </pre>
 
 <p class="explicacao">👉 <strong>Kodu (Koduzin):</strong> É o personagem principal que o jogador deve cuidar.</p>
@@ -165,15 +168,15 @@ PÁGINA 1
 <p class="explicacao">👉 Caso ele fique doente (pontos marrons acima de 0), mostra a fala <strong>“Acho que estou doente”</strong>.</p>
 
 
-<h3>Ball 1</h3>
+<h3>Ball</h3>
 <pre>
 PÁGINA 1
 
-1 - Quando: [mouse left me] Faz: [subtract yellow 5 points]
+1 - Quando: [bump] [kodu] Faz: [- subtract] [yellow] [10 points]
 
-    2 - Quando: [always] Faz: [vanish me]
+    2 - Quando: [always] Faz: [vanish] [me]
 
-3 - Quando: [timer seconds 10] Faz: [vanish me]
+3 - Quando: [timer] [seconds 10] Faz: [vanish] [me]
 </pre>
 
 <p class="explicacao">👉 <strong>Ball:</strong> Representa as bolas de limpeza lançadas pela Factory.</p>
